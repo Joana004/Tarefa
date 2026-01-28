@@ -1,0 +1,53 @@
+<html>
+<head>
+    <title>Formulário Básico</title>
+</head>
+<body>
+    <form action="/submissao-candidato" method="POST">
+        <h2>Formulário de Candidatura</h2>
+
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required><br><br>
+
+            <label for="documento">N.º do Bilhete:</label>
+            <input type="text" id="documento" name="bilhete" required><br><br>
+
+            <label for="mae">Nome da Mãe:</label>
+            <input type="text" id="mae" name="mae" required><br><br>
+
+            <label for="pai">Nome do Pai:</label>
+            <input type="text" id="pai" name="pai" required><br><br>
+
+            <label for="contacto">Contacto:</label>
+            <input type="tel" id="contacto" name="contacto" required><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Endereço</legend>
+            <label for="provincia">Província:</label>
+            <input type="text" id="provincia" name="provincia" required><br><br>
+
+            <label for="bairro">Bairro:</label>
+            <input type="text" id="bairro" name="bairro" required><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Dados Académicos</legend>
+            <label for="instituicao">Instituição:</label>
+            <input type="text" id="instituicao" name="instituicao" required><br><br>
+
+            <label for="curso">Curso:</label>
+            <input type="text" id="curso" name="curso" required><br><br>
+
+            <label for="nivel">Nível Académico:</label>
+            <input type="text" id="nivel" name="nivel" required><br><br>
+        </fieldset>
+
+        <input type="submit" value="Enviar Dados">
+    </form>
+    <a href="tri1.html">VOLTAR</a>
+
+</body>
+</html>
