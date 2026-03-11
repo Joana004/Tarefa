@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<title>Página Inicial</title>
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-gray-100 font-sans p-6">
+
+<div class="max-w-4xl mx-auto space-y-10">
+
+<!-- Título -->
+<h1 class="text-3xl font-bold text-center">Link GITHUB</h1>
+
+<!-- Botão GitHub -->
+<div class="text-center">
+<a href="https://joana004.github.io/Tarefa/"
+target="_blank"
+class="inline-block bg-slate-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-700 transition">
+Abrir Repositório
+</a>
+</div>
+
+<!-- Formulário -->
+<div class="bg-white p-6 rounded-lg shadow">
+<h2 class="text-xl font-bold mb-4">Formulário de Candidatura</h2>
+
+<form action="/submissao-candidato" method="POST" class="space-y-6">
+
+<fieldset class="border p-4 rounded">
+<legend class="font-semibold">Dados Pessoais</legend>
+
+<div class="grid grid-cols-2 gap-4 mt-2">
+<input type="text" placeholder="Nome Completo" name="nome" class="border p-2 rounded" required>
+<input type="text" placeholder="N.º do Bilhete" name="bilhete" class="border p-2 rounded" required>
+
+<input type="text" placeholder="Nome da Mãe" name="mae" class="border p-2 rounded" required>
+<input type="text" placeholder="Nome do Pai" name="pai" class="border p-2 rounded" required>
+
+<input type="tel" placeholder="Contacto" name="contacto" class="border p-2 rounded col-span-2" required>
+</div>
+
+</fieldset>
+
+<fieldset class="border p-4 rounded">
+<legend class="font-semibold">Endereço</legend>
+
+<div class="grid grid-cols-2 gap-4 mt-2">
+<input type="text" placeholder="Província" name="provincia" class="border p-2 rounded" required>
+<input type="text" placeholder="Bairro" name="bairro" class="border p-2 rounded" required>
+</div>
+
+</fieldset>
+
+<fieldset class="border p-4 rounded">
+<legend class="font-semibold">Dados Académicos</legend>
+
+<div class="grid grid-cols-2 gap-4 mt-2">
+<input type="text" placeholder="Instituição" name="instituicao" class="border p-2 rounded" required>
+<input type="text" placeholder="Curso" name="curso" class="border p-2 rounded" required>
+
+<input type="text" placeholder="Nível Académico" name="nivel" class="border p-2 rounded col-span-2" required>
+</div>
+
+</fieldset>
+
+<button class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">
+Enviar Dados
+</button>
+
+</form>
+</div>
+
+<!-- Tabela -->
+<div class="bg-white p-6 rounded-lg shadow">
+<h2 class="text-xl font-bold mb-4">Tabela de Pessoas</h2>
+
+<table class="w-full border border-gray-300 text-center">
+<thead class="bg-gray-200">
+<tr>
+<th class="p-2">Nome</th>
+<th class="p-2">Idade</th>
+<th class="p-2">Bairro</th>
+</tr>
+</thead>
+
+<tbody>
+<tr class="border-t">
+<td class="p-2">Joana</td>
+<td>22</td>
+<td>Casquel</td>
+</tr>
+
+<tr class="border-t">
+<td class="p-2">Lúcia</td>
+<td>19</td>
+<td>São Paulo</td>
+</tr>
+
+<tr class="border-t">
+<td class="p-2">Márcio</td>
+<td>14</td>
+<td>Camama</td>
+</tr>
+
+<tr class="border-t">
+<td class="p-2">Yami</td>
+<td>9</td>
+<td>Cazenga</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<!-- Mídias -->
+<div class="bg-white p-6 rounded-lg shadow space-y-6">
+
+<h1 class="text-2xl font-bold">Site com Áudio, Imagem e Vídeo</h1>
+
+<!-- Áudio -->
+<div>
+<h2 class="font-semibold mb-2">Áudio</h2>
+<audio controls class="w-full">
+<source src="mus/marilia_mendonca_supera_todos_os_cantos_mp3_72346_030840.mp3" type="audio/mp3">
+</audio>
+</div>
+
+<!-- Imagem -->
+<div>
+<h2 class="font-semibold mb-2">Imagem</h2>
+<img src="img/4.jpeg" class="rounded-lg shadow w-full">
+</div>
+
+<!-- Vídeo -->
+<div>
+<h2 class="font-semibold mb-2">Vídeo</h2>
+<video class="w-full rounded-lg shadow" controls>
+<source src="vid/VID-20260111-WA0046 (1).mp4" type="video/mp4">
+</video>
+</div>
+
+</div>
+
+<!-- Botão voltar -->
+<div class="text-center">
+<a href="tri1.html" class="text-blue-600 hover:underline font-semibold">
+⬅ VOLTAR
+</a>
+</div>
+
+</div>
+
+</body>
+</html>

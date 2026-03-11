@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<title>Formulário Básico</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-slate-100 font-sans flex items-center justify-center min-h-screen p-6">
+
+<div class="bg-white shadow-xl rounded-xl w-full max-w-3xl p-8">
+
+<h2 class="text-3xl font-bold text-center text-slate-800 mb-8">
+Formulário de Candidatura
+</h2>
+
+<form action="/submissao-candidato" method="POST" class="space-y-8">
+
+<!-- Dados Pessoais -->
+<fieldset class="border border-slate-200 rounded-lg p-6">
+<legend class="text-lg font-semibold text-slate-700 px-2">
+Dados Pessoais
+</legend>
+
+<div class="grid md:grid-cols-2 gap-4 mt-4">
+
+<div>
+<label class="block text-slate-600 mb-1">Nome Completo</label>
+<input type="text" name="nome" required
+class="w-full border border-slate-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-sky-400 outline-none">
+</div>
+
+<div>
+<label class="block text-slate-600 mb-1">N.º do Bilhete</label>
+<input type="text" name="bilhete" required
+class="w-full border border-slate-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-sky-400 outline-none">
+</div>
+
+<div>
+<label class="block text-slate-600 mb-1">Nome da Mãe</label>
+<input type="text" name="mae" required
+class="w-full border border-slate-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-sky-400 outline-none">
+</div>
+
+<div>
+<label class="block text-slate-600 mb-1">Nome do Pai</label>
+<input type="text" name="pai" required
+class="w-full border border-slate-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-sky-400 outline-none">
+</div>
+
+<div class="md:col-span-2">
+<label class="block text-slate-600 mb-1">Contacto</label>
+<input type="tel" name="contacto" required
+class="w-full border border-slate-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-sky-400 outline-none">
+</div>
+
+</div>
+</fieldset>
+
+<!-- Endereço -->
+<fieldset class="border border-slate-200 rounded-lg p-6">
+<legend class="text-lg font-semibold text-slate-700 px-2">
+Endereço
+</legend>
+
+<div class="grid md:grid-cols-2 gap-4 mt-4">
+
+<div>
+<label class="block text-slate-600 mb-1">Província</label>
+<input type="text" name="provincia" required
+class="w-full border border-slate-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-sky-400 outline-none">
+</div>
+
+<div>
+<label class="block text-slate-600 mb-1">Bairro</label>
+<input type="text" name="bairro" required
+class="w-full border border-slate-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-sky-400 outline-none">
+</div>
+
+</div>
+</fieldset>
+
+<!-- Dados Académicos -->
+<fieldset class="border border-slate-200 rounded-lg p-6">
+<legend class="text-lg font-semibold text-slate-700 px-2">
+Dados Académicos
+</legend>
+
+<div class="grid md:grid-cols-2 gap-4 mt-4">
+
+<div>
+<label class="block text-slate-600 mb-1">Instituição</label>
+<input type="text" name="instituicao" required
+class="w-full border border-slate-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-sky-400 outline-none">
+</div>
+
+<div>
+<label class="block text-slate-600 mb-1">Curso</label>
+<input type="text" name="curso" required
+class="w-full border border-slate-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-sky-400 outline-none">
+</div>
+
+<div class="md:col-span-2">
+<label class="block text-slate-600 mb-1">Nível Académico</label>
+<input type="text" name="nivel" required
+class="w-full border border-slate-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-sky-400 outline-none">
+</div>
+
+</div>
+</fieldset>
+
+<!-- Botão -->
+<div class="text-center">
+
+<button type="submit"
+class="bg-sky-500 text-white px-8 py-3 rounded-lg font-semibold shadow hover:bg-sky-600 transition">
+Enviar Dados
+</button>
+
+</div>
+
+</form>
+
+<div class="text-center mt-6">
+<a href="tri1.html" class="text-sky-600 font-semibold hover:underline">
+VOLTAR
+</a>
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<title>Página Inicial</title>
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-gray-100 font-sans p-6">
+
+<div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow space-y-6">
+
+<!-- Título -->
+<h1 class="text-3xl font-bold text-center text-gray-800">
+SINTAXE BÁSICA do CSS
+</h1>
+
+<!-- Parágrafo -->
+<p class="text-gray-700 text-justify">
+A estrutura básica de uma regra CSS é composta por seletor, propriedade e valor.
+Exemplo:
+<span class="bg-gray-200 px-2 py-1 rounded font-mono">
+p { color: blue; font-size: 16px; }
+</span>
+</p>
+
+<!-- Selectores -->
+<h2 class="text-2xl font-semibold text-gray-800">
+TIPOS DE SELECTORES SIMPLES
+</h2>
+
+<ul class="list-disc pl-6 text-gray-700 space-y-2">
+
+<li>
+<strong>Seletor de Elemento:</strong>
+Seleciona todas as tags HTML do mesmo tipo.  
+<span class="font-mono bg-gray-200 px-1 rounded">p { color: red; }</span>
+</li>
+
+<li>
+<strong>Seletor de Classe:</strong>
+Usa o ponto (.) e pode ser reutilizado em vários elementos.  
+<span class="font-mono bg-gray-200 px-1 rounded">.titulo { color: green; }</span>
+</li>
+
+<li>
+<strong>Seletor de ID:</strong>
+Usa o símbolo # e identifica um único elemento.  
+<span class="font-mono bg-gray-200 px-1 rounded">#menu { background: black; }</span>
+</li>
+
+<li>
+<strong>Seletor Universal:</strong>
+Usa * para selecionar todos os elementos.  
+<span class="font-mono bg-gray-200 px-1 rounded">* { margin: 0; padding: 0; }</span>
+</li>
+
+</ul>
+
+<!-- Diferença -->
+<h2 class="text-2xl font-semibold text-gray-800">
+Diferença entre Class e ID
+</h2>
+
+<p class="text-gray-700">
+<strong>Class</strong> pode ser reutilizada em vários elementos,
+enquanto o <strong>ID</strong> deve ser único em toda a página.
+</p>
+
+<!-- Prioridade -->
+<h2 class="text-2xl font-semibold text-gray-800">
+Prioridade no CSS (Cascata)
+</h2>
+
+<p class="text-gray-700">
+A ordem de prioridade é:
+<span class="font-semibold text-blue-600">
+Inline > ID > Classe > Elemento
+</span>
+</p>
+
+<!-- Propriedades -->
+<h2 class="text-2xl font-semibold text-gray-800">
+Principais Propriedades CSS
+</h2>
+
+<ul class="list-disc pl-6 text-gray-700 space-y-1">
+
+<li>color e background-color: definem cores</li>
+<li>font-size, font-family, font-weight: definem fontes</li>
+<li>margin e padding: definem espaçamentos</li>
+<li>border: define bordas</li>
+<li>width e height: definem tamanhos</li>
+
+</ul>
+
+</div>
+
+<!-- Botão voltar -->
+<div class="text-center mt-6">
+<a href="tri2.html" class="text-blue-600 font-semibold hover:underline">
+⬅ VOLTAR
+</a>
+</div>
+
+</body>
+</html>
