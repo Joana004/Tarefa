@@ -1,37 +1,67 @@
-<html>
+
+<!DOCTYPE html>
+<html lang="pt">
 <head>
-    <title>Página por Trimestres</title>
+<meta charset="UTF-8">
+<title>Página por Trimestres</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- React JS -->
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
 </head>
-<body>
 
-<table border="1" width="100%" height="100%">
-    
-    <tr>
-        <td colspan="2" align="center">
-            <a href="#home">HOME</a> |
-            <a href="#t1">T1</a> |
-            <a href="#t2">T2</a> |
-            <a href="#t3">T3</a> |
-            <a href="#t4">T4</a> |
-            <a href="#t5">T5</a>
-        </td>
-    </tr>
+<body class="bg-slate-100 font-sans">
 
-    <tr>
-        <td width="200" valign="top">
-            <p><a href="tri1.html">1º TRIMESTRE</a></p>
-            <p><a href="tri2.html">2º TRIMESTRE</a></p>
-            <p><a href="tri3.html">3º TRIMESTRE</a></p>
-        </td>
+<!-- MENU -->
+<header class="bg-slate-800 text-white shadow">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-center gap-6 font-semibold">
+    MENU
+  </div>
+</header>
 
-        <td align="center" id="home">
-            <h2>Bem-vindo ao Site</h2>
-            <p>Selecione um trimestre para ver as informações.</p
+<!-- CONTAINER -->
+<div class="max-w-6xl mx-auto mt-8 grid grid-cols-4 gap-6 px-6">
 
-        </td>
-    </tr>
+  <!-- SIDEBAR -->
+  <aside class="col-span-1 bg-white rounded-xl shadow p-6 space-y-4">
+    <h3 class="font-bold text-slate-700 text-lg">Trimestres</h3>
 
-</table>
+    <a href="tri1.html" class="block bg-sky-500 text-white py-2 px-4 rounded-lg text-center hover:bg-sky-600 transition">
+      1º TRIMESTRE
+    </a>
+
+    <a href="tri2.html" class="block bg-emerald-500 text-white py-2 px-4 rounded-lg text-center hover:bg-emerald-600 transition">
+      2º TRIMESTRE
+    </a>
+
+    <a href="tri3.html" class="block bg-indigo-500 text-white py-2 px-4 rounded-lg text-center hover:bg-indigo-600 transition">
+      3º TRIMESTRE
+    </a>
+  </aside>
+
+  <!-- CONTEÚDO -->
+  <main id="home" class="col-span-3 bg-white rounded-xl shadow p-10 text-center">
+    <!-- React renderizará aqui -->
+  </main>
+
+</div>
+
+<script type="text/javascript">
+  const e = React.createElement;
+
+  function App() {
+    return e('div', null,
+      e('h2', { className: 'text-3xl font-bold text-slate-800 mb-4' }, 'Bem-vindo ao Site'),
+      e('p', { className: 'text-slate-600 text-lg' }, 'Selecione um trimestre no menu lateral para visualizar as informações.')
+    );
+  }
+
+  const root = ReactDOM.createRoot(document.getElementById('home'));
+  root.render(e(App));
+</script>
 
 </body>
 </html>
