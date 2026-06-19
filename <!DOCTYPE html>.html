@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados do Aluno</title>
+</head>
+
+<body style="
+    font-family:Arial,sans-serif;
+    background:#f4f6f9;
+    padding:30px;
+">
+
+    <h1 style="
+        text-align:center;
+        color:#011f4b;
+        margin-bottom:30px;
+    ">
+        Gestão de Alunos
+    </h1>
+
+    <form
+        id="formAluno"
+        style="
+            width:600px;
+            margin:20px auto;
+            padding:25px;
+            border:none;
+            border-radius:12px;
+            background:white;
+            box-shadow:0 4px 12px rgba(0,0,0,.1);
+        "
+    >
+
+        <input
+            type="text"
+            id="numero"
+            placeholder="Número do aluno"
+            required
+            style="
+                width:100%;
+                padding:12px;
+                margin-bottom:12px;
+                border:1px solid #ccc;
+                border-radius:8px;
+                box-sizing:border-box;
+            "
+        >
+
+        <input
+            type="text"
+            id="nome"
+            placeholder="Nome do aluno"
+            required
+            style="
+                width:100%;
+                padding:12px;
+                margin-bottom:12px;
+                border:1px solid #ccc;
+                border-radius:8px;
+                box-sizing:border-box;
+            "
+        >
+
+        <input
+            type="number"
+            id="idade"
+            placeholder="Idade"
+            required
+            style="
+                width:100%;
+                padding:12px;
+                margin-bottom:12px;
+                border:1px solid #ccc;
+                border-radius:8px;
+                box-sizing:border-box;
+            "
+        >
+
+        <input
+            type="text"
+            id="turma"
+            placeholder="Turma"
+            required
+            style="
+                width:100%;
+                padding:12px;
+                margin-bottom:12px;
+                border:1px solid #ccc;
+                border-radius:8px;
+                box-sizing:border-box;
+            "
+        >
+
+        <input
+            type="text"
+            id="curso"
+            placeholder="Curso"
+            required
+            style="
+                width:100%;
+                padding:12px;
+                margin-bottom:12px;
+                border:1px solid #ccc;
+                border-radius:8px;
+                box-sizing:border-box;
+            "
+        >
+
+        <input
+            type="number"
+            id="nota1"
+            placeholder="Nota 1"
+            required
+            style="
+                width:100%;
+                padding:12px;
+                margin-bottom:12px;
+                border:1px solid #ccc;
+                border-radius:8px;
+                box-sizing:border-box;
+            "
+        >
+
+        <input
+            type="number"
+            id="nota2"
+            placeholder="Nota 2"
+            required
+            style="
+                width:100%;
+                padding:12px;
+                margin-bottom:12px;
+                border:1px solid #ccc;
+                border-radius:8px;
+                box-sizing:border-box;
+            "
+        >
+
+        <input
+            type="number"
+            id="nota3"
+            placeholder="Nota 3"
+            required
+            style="
+                width:100%;
+                padding:12px;
+                margin-bottom:20px;
+                border:1px solid #ccc;
+                border-radius:8px;
+                box-sizing:border-box;
+            "
+        >
+
+        <button
+            type="submit"
+            style="
+                width:100%;
+                padding:14px;
+                background:#011f4b;
+                color:white;
+                border:none;
+                border-radius:8px;
+                font-size:16px;
+                font-weight:bold;
+                cursor:pointer;
+            "
+        >
+            Adicionar Aluno
+        </button>
+
+    </form>
+
+    <table
+        style="
+            width:95%;
+            margin:30px auto;
+            border-collapse:collapse;
+            text-align:center;
+            background:white;
+            box-shadow:0 4px 12px rgba(0,0,0,.1);
+            border-radius:12px;
+            overflow:hidden;
+        "
+    >
+
+        <thead
+            style="
+                background:#011f4b;
+                color:white;
+                text-transform:uppercase;
+            "
+        >
+            <tr>
+                <th style="padding:15px;">Nº</th>
+                <th style="padding:15px;">Nome</th>
+                <th style="padding:15px;">Idade</th>
+                <th style="padding:15px;">Turma</th>
+                <th style="padding:15px;">Curso</th>
+                <th style="padding:15px;">Nota 1</th>
+                <th style="padding:15px;">Nota 2</th>
+                <th style="padding:15px;">Nota 3</th>
+                <th style="padding:15px;">Média</th>
+                <th style="padding:15px;">Situação</th>
+            </tr>
+        </thead>
+
+        <tbody id="tabelaAlunos"></tbody>
+
+    </table>
+
+    <script>
+
+        const formAluno = document.querySelector('#formAluno');
+        const tabelaAlunos = document.querySelector('#tabelaAlunos');
+
+        formAluno.addEventListener('submit', cadastrarAluno);
+
+        function cadastrarAluno(event) {
+
+            event.preventDefault();
+
+            const aluno = obterDadosAluno();
+
+            adicionarAlunoNaTabela(aluno);
+
+            formAluno.reset();
+        }
+
+        function obterDadosAluno() {
+
+            const nota1 = Number(document.querySelector('#nota1').value);
+            const nota2 = Number(document.querySelector('#nota2').value);
+            const nota3 = Number(document.querySelector('#nota3').value);
+
+            const media = ((nota1 + nota2 + nota3) / 3).toFixed(2);
+
+            return {
+                numero: document.querySelector('#numero').value,
+                nome: document.querySelector('#nome').value,
+                idade: document.querySelector('#idade').value,
+                turma: document.querySelector('#turma').value,
+                curso: document.querySelector('#curso').value,
+                nota1,
+                nota2,
+                nota3,
+                media,
+                situacao: media >= 10 ? 'Aprovado' : 'Reprovado'
+            };
+        }
+
+        function adicionarAlunoNaTabela(aluno) {
+
+            const corSituacao =
+                aluno.situacao === 'Aprovado'
+                    ? '#198754'
+                    : '#dc3545';
+
+            tabelaAlunos.innerHTML += `
+                <tr style="border-bottom:1px solid #eee;">
+                    <td style="padding:12px;">${aluno.numero}</td>
+                    <td style="padding:12px;">${aluno.nome}</td>
+                    <td style="padding:12px;">${aluno.idade}</td>
+                    <td style="padding:12px;">${aluno.turma}</td>
+                    <td style="padding:12px;">${aluno.curso}</td>
+                    <td style="padding:12px;">${aluno.nota1}</td>
+                    <td style="padding:12px;">${aluno.nota2}</td>
+                    <td style="padding:12px;">${aluno.nota3}</td>
+                    <td style="padding:12px;">
+                        <strong>${aluno.media}</strong>
+                    </td>
+                    <td style="padding:12px;">
+                        <span
+                            style="
+                                background:${corSituacao};
+                                color:white;
+                                padding:6px 12px;
+                                border-radius:20px;
+                                font-size:12px;
+                                font-weight:bold;
+                            "
+                        >
+                            ${aluno.situacao}
+                        </span>
+                    </td>
+                </tr>
+            `;
+        }
+
+    </script>
+
+</body>
+
+</html>
